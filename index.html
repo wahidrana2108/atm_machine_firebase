@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Money || Home</title>
+    <link rel="stylesheet" href="style/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="center-div">
+        <h1>Black Money Bank</h1>
+        <label for="" id="errMsg">...</label>
+
+        <div id="login-portal">
+            <h3>Login</h3>
+            <label for="">Account No:</label><br>
+            <input type="text" id="lAccNo" required><br>
+            <label for="">Pin no:</label><br>
+            <input type="password" name="" id="lAccPin" required><br>
+            <button id="login-btn">Login</button><br>
+            <label for="" id="switchToReg"> Don't have a account? Register</label><br>
+        </div><br><br>
+
+
+        <div id="register-portal">
+            <h3>Register</h3>
+            <label for="">Name:</label><br>
+            <input type="text" id="rAccName" required><br>
+            <label for="">Account No:</label><br>
+            <input type="text" id="rAccNo" required><br>
+            <label for="">Pin no:</label><br>
+            <input type="password" name="" id="rAccPin" required><br>
+            <label for="">Confirm Pin no:</label><br>
+            <input type="password" name="" id="rConAccPin" required><br>
+            <button id="register-btn">Register</button><br>
+            <label for="" id="switchToLogin">Already have a account? Login</label><br>
+        </div>
+
+        <div id="portal">
+            <h3 id="userName">...</h3>
+            <h3 id="totalBalance">...</h3>
+        </div>
+
+        <div id="deposit-portal">
+            <h4>Deposit</h4>
+            <label for="">Enter Amount:</label><br>
+            <input type="text" name="" id="deposit-amt" required><br>
+            <button id="dep-submit">Deposit</button><br>
+        </div><br>
+
+        <div id="withdraw-portal">
+            <h4>Withdraw</h4>
+            <label for="">Enter Amount:</label><br>
+            <input type="text" name="" id="withdraw-amt" required><br>
+            <button id="wit-submit">Withdraw</button><br>
+        </div>
+
+        <div id="transfer-portal">
+            <h4>Transfer</h4>
+            <label for="">Enter Transfer Account:</label><br>
+            <input type="text" name="" id="transfer-acc-no" required><br>
+            <label for="">Enter Amount:</label><br>
+            <input type="text" name="" id="transfer-amt" required><br>
+            <button id="trans-submit">Transfer</button><br>
+        </div>
+
+        <div id="option">
+            <h3>Please select an option:</h3>
+            <button id="deposit-btn">Deposit</button>
+            <button id="withdraw-btn">Withdraw</button>
+            <button id="transfer-btn">Transfer</button>
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+</body>
+</html>
