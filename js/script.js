@@ -1,4 +1,36 @@
+// firebase config
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-app.js";
+  import { getDatabase, ref, set, get, child, push, update } from "https://www.gstatic.com/firebasejs/9.9.2/firebase-database.js";
+
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBcJ89A1qA-32LVJIcPlLde_5h93NNVJe8",
+    authDomain: "atm-project-ebdec.firebaseapp.com",
+    projectId: "atm-project-ebdec",
+    storageBucket: "atm-project-ebdec.appspot.com",
+    messagingSenderId: "144103181907",
+    appId: "1:144103181907:web:5b171bcd583844c8b900a6"
+  };
+
+
+
+
+
+
+
+//register and login validations 
+
 window.onload = function(){
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase();
+    const dbRef = ref(db);
+
+
+
+
+
     document.getElementById('switchToReg').onclick = switchToReg;
     document.getElementById('switchToLogin').onclick = switchToLogin;
     document.getElementById('login-btn').onclick = loginValidation;
@@ -41,10 +73,28 @@ window.onload = function(){
         var rConAccPin = document.getElementById('rConAccPin').value;
 
         if (rAccNo.match(accNoPat) && rAccPin.match(accPinPat) && rAccName!=null && rAccPin==rConAccPin) {
-            alert("welcome!");
+            set(ref(db, "accNo "+rAccNo+"/accPin "+rAccPin+"/accDetails"),{
+                name: rAccName,
+                availBal: 0
+            }).then(()=>{
+                alert("Registration Completed!");
+            }).catch((error)=>{
+                alert("Registration Failed!"+error);
+            });
+
+            set(ref(db, "accNo "+rAccNo+"/recivedBal"),{
+                recived: 0
+            }).then(()=>{
+                console.log("recived amount updated!");
+            }).catch((error)=>{
+                alert("recived amount update Failed!"+error);
+            });
         }
         else{
             alert("Fill all ino correctly!");
         }
     }
+
+
+
 }
