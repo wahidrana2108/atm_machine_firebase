@@ -11,16 +11,16 @@
 </head>
 <body>
     <div class="center-div">
-        <h1>Black Money Bank</h1>
+        <h1 class="text-center">Black Money Bank</h1>
         <label for="" id="errMsg">...</label>
 
         <div id="login-portal">
             <h3>Login</h3>
             <label for="">Account No:</label><br>
-            <input type="text" id="lAccNo" required><br>
+            <input type="text" class="form-control" id="lAccNo" required><br>
             <label for="">Pin no:</label><br>
-            <input type="password" name="" id="lAccPin" required><br>
-            <button id="login-btn">Login</button><br>
+            <input type="password" name="" class="form-control" id="lAccPin" required><br>
+            <button class="btn btn-success" id="login-btn">Login</button><br><br>
             <label for="" id="switchToReg"> Don't have a account? Register</label><br>
         </div><br><br>
 
@@ -28,52 +28,54 @@
         <div id="register-portal">
             <h3>Register</h3>
             <label for="">Name:</label><br>
-            <input type="text" id="rAccName" required><br>
+            <input type="text" class="form-control" id="rAccName" required><br>
             <label for="">Account No:</label><br>
-            <input type="text" id="rAccNo" required><br>
+            <input type="text" class="form-control" id="rAccNo" required><br>
             <label for="">Pin no:</label><br>
-            <input type="password" name="" id="rAccPin" required><br>
+            <input type="password" name="" class="form-control" id="rAccPin" required><br>
             <label for="">Confirm Pin no:</label><br>
-            <input type="password" name="" id="rConAccPin" required><br>
-            <button id="register-btn">Register</button><br>
+            <input type="password" name="" class="form-control" id="rConAccPin" required><br>
+            <button class="btn btn-success" id="register-btn">Register</button><br><br>
             <label for="" id="switchToLogin">Already have a account? Login</label><br>
         </div>
 
         <div id="portal">
             <h3 id="userName">...</h3>
             <h3 id="totalBalance">...</h3>
+
+            <div id="deposit-portal">
+                <h4>Deposit</h4>
+                <label for="">Enter Amount:</label><br>
+                <input type="text" name="" class="form-control" id="deposit-amt" required><br>
+                <button class="btn btn-success" id="dep-submit">Deposit</button><br>
+            </div><br>
+    
+            <div id="withdraw-portal">
+                <h4>Withdraw</h4>
+                <label for="">Enter Amount:</label><br>
+                <input type="text" name="" class="form-control" id="withdraw-amt" required><br>
+                <button class="btn btn-success" id="wit-submit">Withdraw</button><br>
+            </div>
+    
+            <div id="transfer-portal">
+                <h4>Transfer</h4>
+                <label for="">Enter Transfer Account:</label><br>
+                <input type="text" name="" class="form-control" id="transfer-acc-no" required><br>
+                <label for="">Enter Amount:</label><br>
+                <input type="text" name="" class="form-control" id="transfer-amt" required><br>
+                <button class="btn btn-success" id="trans-submit">Transfer</button><br>
+            </div><br>
+    
+            <div id="option">
+                <h3>Please select an option:</h3>
+                <button class="btn btn-success" id="deposit-btn">Deposit</button>
+                <button class="btn btn-success" id="withdraw-btn">Withdraw</button>
+                <button class="btn btn-success" id="transfer-btn">Transfer</button>
+            </div>
+    
         </div>
 
-        <div id="deposit-portal">
-            <h4>Deposit</h4>
-            <label for="">Enter Amount:</label><br>
-            <input type="text" name="" id="deposit-amt" required><br>
-            <button id="dep-submit">Deposit</button><br>
-        </div><br>
-
-        <div id="withdraw-portal">
-            <h4>Withdraw</h4>
-            <label for="">Enter Amount:</label><br>
-            <input type="text" name="" id="withdraw-amt" required><br>
-            <button id="wit-submit">Withdraw</button><br>
-        </div>
-
-        <div id="transfer-portal">
-            <h4>Transfer</h4>
-            <label for="">Enter Transfer Account:</label><br>
-            <input type="text" name="" id="transfer-acc-no" required><br>
-            <label for="">Enter Amount:</label><br>
-            <input type="text" name="" id="transfer-amt" required><br>
-            <button id="trans-submit">Transfer</button><br>
-        </div>
-
-        <div id="option">
-            <h3>Please select an option:</h3>
-            <button id="deposit-btn">Deposit</button>
-            <button id="withdraw-btn">Withdraw</button>
-            <button id="transfer-btn">Transfer</button>
-        </div>
-
+        
 
 
     </div>
