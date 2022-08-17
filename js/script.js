@@ -58,6 +58,7 @@ window.onload = function(){
 
         if (lAccNo.match(accNoPat) && lAccPin.match(accPinPat)) {
             alert("welcome!");
+            portal(lAccNo,lAccPin);
         }
         else{
             alert("invalid info!");
@@ -93,6 +94,28 @@ window.onload = function(){
         else{
             alert("Fill all ino correctly!");
         }
+    }
+
+    function portal(accNo,accPin){
+        document.getElementById('login-portal').style = "display:none";
+        document.getElementById('register-portal').style = "display:none";
+        document.getElementById('portal').style = "display:inline-block";
+
+        var name,availBal,totalBal, recivedBal;
+        // getting data from firebase
+        get(child(dbref, "accNo "+rAccNo+"/accPin "+rAccPin+"/accDetails")).then((snapshot)=>{
+            if (snapshot.exists()) {
+                name: snapshot.val().name;
+                availBal: snapshot.val().availBal;
+                document.getElementById("")
+
+            }
+            else{
+                alert("No data available!");
+            }
+        }).catch((error)=>{
+            alert("error While getting data\n"+error);
+        });
     }
 
 
