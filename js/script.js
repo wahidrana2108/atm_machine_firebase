@@ -107,7 +107,7 @@ window.onload = function(){
             if (snapshot.exists()) {
                 name: snapshot.val().name;
                 availBal: snapshot.val().availBal;
-                document.getElementById("")
+                document.getElementById("").innerHTML = "Hi ".name;
 
             }
             else{
